@@ -1,199 +1,417 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Industry Biorrefinerías Residuo Cero</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
-body{color:#1f2937;line-height:1.6;background:#fff}
-header{background:#fff;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #e5e7eb;position:sticky;top:0;z-index:99}
-.logo{font-size:1.1rem;font-weight:800;color:#1b4332}
-.logo span{display:block;font-size:.75rem;color:#2d6a4f}
-.btn-nav{background:#1b4332;color:#fff;padding:.5rem 1rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.85rem}
-.hero{background:#1b4332;color:#fff;padding:3.5rem 5%;text-align:center}
-.badge{display:inline-block;background:rgba(255,255,255,.15);padding:.4rem .9rem;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:1rem}
-.hero h1{font-size:1.9rem;margin-bottom:1rem;line-height:1.25}
-.hero p{max-width:750px;margin:0 auto 1.8rem;color:#e5e7eb;font-size:1rem}
-.btn{display:inline-block;background:#52b788;color:#1b4332;padding:.8rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:700;margin:.3rem}
-.btn-out{display:inline-block;border:2px solid #fff;color:#fff;padding:.75rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:700;margin:.3rem}
-section{padding:3rem 5%;max-width:1050px;margin:0 auto}
-.bg-gray{background:#f4f7f5;max-width:100%}
-.wrap{max-width:1050px;margin:0 auto}
-h2{color:#1b4332;font-size:1.65rem;margin-bottom:.8rem;text-align:center}
-.sub{text-align:center;color:#4b5563;max-width:750px;margin:0 auto 2rem}
-.alert{background:#fffbeb;border-left:5px solid #b45309;padding:1.2rem;border-radius:6px;margin-bottom:2rem;color:#78350f;font-size:.93rem}
-.card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:4px solid #2d6a4f;margin-bottom:1.2rem}
-.card h3{color:#1b4332;margin-bottom:.5rem;font-size:1.15rem}
-.specs{background:#f4f7f5;padding:.8rem;border-radius:6px;margin:.8rem 0;font-size:.9rem}
-.ref{font-size:.82rem;color:#4b5563;border-top:1px solid #e5e7eb;padding-top:.5rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
-.stat{background:#1b4332;color:#fff;padding:1.3rem;border-radius:8px;text-align:center}
-.stat strong{display:block;font-size:1.5rem;color:#52b788}
-table{width:100%;border-collapse:collapse;background:#fff;margin-bottom:1.5rem;font-size:.9rem}
-th{background:#1b4332;color:#fff;padding:.8rem;text-align:left}
-td{padding:.75rem .8rem;border-bottom:1px solid #e5e7eb}
-.tot{background:#ecfdf5;font-weight:700;color:#1b4332}
-.founder{background:#f4f7f5;padding:1.8rem;border-radius:10px;border:1px solid #d1fae5;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
-.avatar{width:85px;height:85px;border-radius:50%;background:#1b4332;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;border:3px solid #52b788}
-.contact{background:#1b4332;color:#fff;padding:2.5rem 1.5rem;border-radius:10px;text-align:center}
-.email-box{background:rgba(255,255,255,.15);padding:.9rem;border-radius:6px;font-weight:700;margin:1.2rem auto;max-width:420px;word-break:break-all;border:1px dashed #fff}
-footer{background:#111827;color:#9ca3af;text-align:center;padding:1.8rem 5%;font-size:.85rem}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Industry Biorrefinerías Residuo Cero | Yaracuy, Venezuela</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #faf8f2;
+      color: #1a202c;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #1b4332;
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .brand { font-weight: 800; color: #1b4332; font-size: 1.05rem; line-height: 1.2; }
+    .brand span { display: block; font-size: 0.78rem; font-weight: 600; color: #2e7d32; }
+    .btn-nav {
+      background-color: #1b4332;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .welcome {
+      background-color: #faf8f2;
+      padding: 36px 5% 44px 5%;
+      text-align: center;
+      border-bottom: 3px solid #1b4332;
+    }
+    .badge-welcome {
+      display: inline-block;
+      background-color: #e8f5e9;
+      color: #1b4332;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      border: 1px solid #2e7d32;
+    }
+    .logo-box { max-width: 440px; margin: 0 auto 22px auto; }
+    .logo-box img { width: 100%; height: auto; border-radius: 12px; display: block; }
+    .welcome h1 {
+      color: #1b4332;
+      font-size: 1.7rem;
+      line-height: 1.25;
+      max-width: 760px;
+      margin: 0 auto 14px auto;
+      font-weight: 800;
+    }
+    .welcome p {
+      color: #1f2937;
+      font-size: 1.05rem;
+      max-width: 680px;
+      margin: 0 auto 24px auto;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .btn-primary {
+      background-color: #1b4332;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #1b4332;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 2px solid #1b4332;
+    }
+    section { padding: 48px 5%; max-width: 1040px; margin: 0 auto; }
+    .bg-alt { background-color: #f3efe4; border-top: 1px solid #e2dccb; border-bottom: 1px solid #e2dccb; }
+    .section-tag {
+      display: inline-block;
+      color: #2e7d32;
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+    h2 { color: #1b4332; font-size: 1.6rem; line-height: 1.25; margin-bottom: 10px; font-weight: 800; }
+    .sub { color: #374151; font-size: 1.02rem; margin-bottom: 26px; }
+    .alert {
+      background-color: #e8f5e9;
+      border-left: 5px solid #1b4332;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 28px;
+      font-size: 0.95rem;
+      color: #143626;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #dcd6c4;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .card h3 { color: #1b4332; font-size: 1.15rem; margin-bottom: 10px; font-weight: 800; }
+    .card p { color: #1f2937; font-size: 0.98rem; margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .tech-specs {
+      background-color: #faf8f2;
+      border-left: 4px solid #2e7d32;
+      padding: 10px 12px;
+      margin: 12px 0;
+      font-size: 0.92rem;
+      border-radius: 0 6px 6px 0;
+    }
+    .tech-ref {
+      font-size: 0.85rem;
+      color: #4b5563;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-box {
+      background-color: #1b4332;
+      color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stat-num { font-size: 1.45rem; font-weight: 800; color: #a7f3d0; display: block; margin-bottom: 4px; }
+    .stat-label { font-size: 0.9rem; color: #f0fdf4; }
+    .fin-box {
+      background-color: #ffffff;
+      border: 2px solid #1b4332;
+      padding: 18px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .fin-num { font-size: 1.4rem; font-weight: 800; color: #1b4332; display: block; margin-bottom: 4px; }
+    .fin-label { font-size: 0.88rem; color: #374151; font-weight: 600; }
+    .founder-card {
+      background-color: #ffffff;
+      border: 2px solid #1b4332;
+      border-radius: 14px;
+      padding: 26px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      align-items: center;
+    }
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1b4332;
+    }
+    .founder-info { flex: 1; min-width: 240px; }
+    .contact-box {
+      background-color: #1b4332;
+      color: #ffffff;
+      padding: 36px 24px;
+      border-radius: 14px;
+      text-align: center;
+      margin-top: 28px;
+    }
+    .contact-box h2 { color: #ffffff; margin-bottom: 12px; }
+    .contact-box p { color: #e6f4ea; max-width: 650px; margin: 0 auto 22px auto; }
+    .btn-email {
+      display: inline-block;
+      background-color: #48a868;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+    footer {
+      background-color: #143626;
+      color: #d1fae5;
+      text-align: center;
+      padding: 24px 5%;
+      font-size: 0.88rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo">GREEN INDUSTRY<span>Biorrefinerías Residuo Cero</span></div>
-  <a href="#contacto" class="btn-nav">Conectar</a>
-</header>
 
-<!-- PORTADA DE BIENVENIDA CON LOGOTIPO NÍTIDO -->
-<section style="background-color:#faf8f2;padding:35px 5% 45px 5%;text-align:center;border-bottom:3px solid #1b4332;">
-  <div style="max-width:750px;margin:0 auto;">
-    <span style="display:inline-block;background-color:#e8f5e9;color:#1b4332;font-weight:700;font-size:0.85rem;padding:6px 16px;border-radius:20px;margin-bottom:20px;border:1px solid #2e7d32;">BIENVENIDO A GREEN INDUSTRY BIORREFINERÍAS</span>
-    
-    <!-- Tu logotipo nítido, sin letras encima -->
-    <div style="margin:0 auto 24px auto;max-width:460px;">
-      <img src="image_3126129f.jpg" alt="Logotipo Green Industry Biorrefinerías" style="width:100%;height:auto;border-radius:12px;display:block;margin:0 auto;">
+  <header>
+    <div class="brand">GREEN INDUSTRY<span>Biorrefinerías Residuo Cero</span></div>
+    <a href="#contacto" class="btn-nav">Conectar</a>
+  </header>
+
+  <div class="welcome">
+    <span class="badge-welcome">BIENVENIDO A GREEN INDUSTRY BIORREFINERÍAS</span>
+    <div class="logo-box">
+      <img src="image_3126129f.jpg" alt="Logotipo Green Industry Biorrefinerías">
     </div>
-
-    <!-- Texto limpio debajo del logotipo -->
-    <h1 style="color:#1b4332;font-size:1.75rem;line-height:1.25;margin-bottom:1rem;font-weight:800;">Proyecto en fase de idea para crear la primera biorrefinería residuo cero de aguacate en Venezuela</h1>
-    <p style="color:#1f2937;font-size:1.05rem;line-height:1.55;font-weight:500;margin:0 auto;max-width:650px;">Iniciativa diseñada en <strong>San Felipe, Yaracuy</strong> para transformar el aguacate de descarte en <strong>aceite puro</strong>, <strong>pellets compuestos de bioplástico</strong> y <strong>base para alimento animal (ABA)</strong>.</p>
-  </div>
-</section>
-
-
-<!-- BLOQUE VERDE DE IMPACTO Y BOTONES (SIN REPETICIÓN) -->
-<div class="hero">
-  <div class="badge">📍 SAN FELIPE, YARACUY · MODELO AGROINDUSTRIAL B2B</div>
-  <h1>Aprovechamiento Integral del Descarte Agrícola</h1>
-  <p>Diseñado para rescatar y valorizar las <strong>7.000 toneladas de aguacate descartadas durante la zafra</strong> en Yaracuy, generando insumos industriales de alto valor bajo un esquema de economía circular.</p>
-  <a href="#fichas" class="btn">Ver Fichas Técnicas</a>
-  <a href="#finanzas" class="btn-out">Hoja de Números</a>
-</div>
-
-
-<section>
-  <div class="alert">
-    <strong>Transparencia de Etapa (Fase de Idea):</strong> Iniciativa en etapa conceptual con ingeniería preliminar, data pública validada (CIEPE, INIA, UCV, ULA, USB) y simulación financiera bajo estrés. Buscamos <strong>socios cofundadores, inversores ángeles y capital semilla</strong> para constituir legalmente la empresa y ejecutar ensayos de laboratorio.
-  </div>
-  <h2>Problema y Ventaja Competitiva</h2>
-  <p class="sub">Conectamos el descarte agrícola de Yaracuy con la alta demanda industrial de insumos naturales y biopolímeros.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Centro de Acopio Directo en Origen</h3>
-      <p>Ubicados en <strong>San Felipe, Yaracuy</strong>, articulamos con productores locales para rescatar <strong>7.000 toneladas de aguacate durante la zafra</strong> (variedades Choquette y Catalina) descartadas por estética, negociando precios variables según la dinámica de mercado.</p>
-    </div>
-    <div class="card">
-      <h3>Blindaje IGP Yaracuy y Sustitución</h3>
-      <p>Proyectados bajo el estándar de referentes como <em>NBF Colombia</em> y <em>Biofase México</em>, respaldados por la <strong>Indicación Geográfica Protegida (IGP) Aguacate de Yaracuy</strong> (SAPI Res. N° 778) para sustituir importaciones y exportar.</p>
+    <h1>Proyecto en fase de idea para crear la primera biorrefinería residuo cero de aguacate en Venezuela</h1>
+    <p>Iniciativa agroindustrial B2B diseñada en <strong>San Felipe, Yaracuy</strong> para transformar el aguacate de descarte en <strong>aceite puro</strong>, <strong>pellets compuestos de bioplástico</strong> y <strong>base para alimento animal (ABA)</strong>.</p>
+    <div class="hero-btns">
+      <a href="#fichas" class="btn-primary">Ver Fichas Técnicas</a>
+      <a href="#finanzas" class="btn-secondary">Modelo Financiero</a>
     </div>
   </div>
-</section>
-<div class="bg-gray" id="fichas">
-<section class="wrap">
-  <h2>Dossier de 4 Productos Industriales</h2>
-  <p class="sub">Aprovechamiento integral (pulpa, semilla y cáscara) basado en protocolos científicos públicos.</p>
-
-  <div class="card">
-    <h3>1. Aceite Crudo Virgen de Aguacate (Industrial / Cosmético)</h3>
-    <p>Lípido vegetal sin refinar extraído por centrifugación mecánica de pulpa madurada de aguacate Choquette.</p>
-    <div class="specs"><strong>Rendimiento:</strong> 8,0% piso (80 L/Ton) a 13,0% fresco | <strong>Acidez:</strong> 1,5% - 2,0% | <strong>Bioactivos:</strong> Vitaminas A, D, E y fitoesteroles.</div>
-    <div class="ref">Respaldo: SAPI (Res. N° 778 IGP), INIA (Agronomía Tropical Vol. 44-4), Fundación CIEPE y UCV.</div>
-  </div>
-
-  <div class="card">
-    <h3>2. Aceite Neutro Refinado de Aguacate (Grado Alimentario)</h3>
-    <p>Lípido purificado mediante refinación alcalina (RBD) para procesos térmicos continuos.</p>
-    <div class="specs"><strong>Rendimiento:</strong> 8,0% piso (80 L/Ton) | <strong>Acidez:</strong> ≤ 0,1% | <strong>Punto de Humo:</strong> 271 °C (520 °F).</div>
-    <div class="ref">Respaldo: INIA (Repositorio SIAN), Fundación CIEPE y UCV.</div>
-  </div>
-
-  <div class="card">
-    <h3>3. Pellets Compuestos de Bioplástico (Extrusión e Inyección)</h3>
-    <p>Gránulos biopoliméricos listos para moldear con almidón de semilla (30%–32%), glicerina y matrices biodegradables.</p>
-    <div class="specs"><strong>Conversión:</strong> 60,75 kg/Ton almidón → <strong>196,17 kg/Ton pellets</strong> (101,25 kg rígidos / 94,92 kg flexibles) | <strong>Degradación:</strong> ≤ 180 días.</div>
-    <div class="ref">Respaldo: ULA, Grupo B5IDA - USB (Dr. Marcos Sabino), Fundación CIEPE y UCV.</div>
-  </div>
-
-  <div class="card">
-    <h3>4. Base para Alimento Balanceado Animal (ABA - Residuo Cero)</h3>
-    <p>Biomasa vegetal estabilizada por secado térmico de pulpa desengrasada, cáscara y fibra residual.</p>
-    <div class="specs"><strong>Balance de Masa:</strong> 85,925% (859,25 kg/Ton) · Techo 86,50% | <strong>Destino:</strong> Plantas de Alimentos Balanceados (ABA).</div>
-    <div class="ref">Respaldo: Fundación CIEPE, INIA y UCV.</div>
-  </div>
-</section>
-</div>
-
-<section>
-  <h2>Potencial Anual de las 7.000 Toneladas</h2>
-  <p class="sub">Calculado bajo rendimientos mínimos CIEPE y precios conservadores frente a importación.</p>
-  <div class="grid">
-    <div class="stat"><strong>560.000 L</strong>Aceite Puro (Ref. $5,50/L)</div>
-    <div class="stat"><strong>1.373.190 kg</strong>Pellets Bioplásticos (Ref. $2,50/kg)</div>
-    <div class="stat"><strong>6.014.750 kg</strong>Base Proteica ABA (Ref. $0,20/kg)</div>
-    <div class="stat"><strong>$7.715.925</strong>Oportunidad Comercial Anual</div>
-  </div>
-</section>
-
-<div class="bg-gray" id="finanzas">
-<section class="wrap">
-  <h2>Hoja de Números (Simulación Bajo Estrés)</h2>
-  <p class="sub">Calibrada en fase de idea para jornada de 8h (22 días/mes = 176 Ton/mes). El costo de materia prima ($0,20/kg) es un parámetro referencial simulado.</p>
-
-  <table>
-    <tr><th colspan="2">1. Plan de Inversión Inicial Simulado (CAPEX)</th></tr>
-    <tr><td>Equipos Refinación Aceite (Línea Alfa Laval)</td><td>$245.000,00</td></tr>
-    <tr><td>Línea Biopolímeros (Peletizadora), Molienda y ABA</td><td>$110.000,00</td></tr>
-    <tr><td>Tanques Acero Inoxidable y Atmósfera Nitrógeno</td><td>$30.000,00</td></tr>
-    <tr><td>Recepción, Maduración y Obra Civil/Eléctrica</td><td>$105.000,00</td></tr>
-    <tr><td>Ingeniería, Laboratorio ($20k) + Permisos ($15k)</td><td>$35.000,00</td></tr>
-    <tr><td>Fondo Protección Operativa (4 Meses)</td><td>$125.000,00</td></tr>
-    <tr class="tot"><td>TOTAL CAPEX SIMULADO</td><td>$650.000,00</td></tr>
-  </table>
-
-  <table>
-    <tr><th colspan="2">2. Unit Economics (Por Tonelada) y Operación Mensual</th></tr>
-    <tr><td>Ingreso Bruto/Ton (80L Aceite + 196,17kg Pellets + 859,25kg ABA)</td><td><strong>$1.102,28 / Ton</strong></td></tr>
-    <tr><td>Costo Variable/Ton (Materia prima ref., PLA/PBAT, glicerina e insumos)</td><td>-$580,83 / Ton</td></tr>
-    <tr class="tot"><td>MARGEN BRUTO REAL POR TONELADA (47,31%)</td><td>$521,45 / Ton</td></tr>
-    <tr><td>Costo Fijo Operativo Mensual (OPEX - Nómina 35 pers., galpón, servicios)</td><td>$24.900,00 / mes</td></tr>
-    <tr><td>Punto de Equilibrio Operativo Mínimo</td><td>47,75 Ton / mes</td></tr>
-    <tr><td>Utilidad Mensual Proyectada (176 Ton/mes · Antes de ISLR)</td><td>$66.875,20 / mes</td></tr>
-    <tr class="tot"><td>RECUPERACIÓN DEL CAPEX (Esquema 40/40/20)</td><td>24,3 Meses (2 Años)</td></tr>
-  </table>
-</section>
-</div>
-
-<section>
-  <h2>Fundador y Solicitud de Capital Semilla</h2>
-  <div class="founder">
-    <div class="avatar"><img src="image_d2aec981.jpg" alt="Wilkar Sánchez" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
-    
-    <div style="flex:1;min-width:250px">
-      <h3 style="color:#1b4332;font-size:1.35rem">Wilkar Sánchez</h3>
-      <p style="color:#2d6a4f;font-weight:700;margin-bottom:.5rem">Fundador y Director General · Promotor Industrial y Auditor de Control de Calidad</p>
-      <p style="font-size:.94rem;color:#4b5563">Pequeño productor de aguacate en Yaracuy con experiencia en campo y auditoría de calidad industrial. Lidera la articulación con productores agrícolas locales y las mesas técnicas con la industria compradora.</p>
-      <p style="font-size:.88rem;font-weight:700;color:#1b4332;margin-top:.5rem">📍 San Felipe, Estado Yaracuy, Venezuela · ✉️ greenindustrybiorefineriasvy@gmail.com</p>
+    <section>
+    <div class="alert">
+      <strong>Transparencia de Etapa (Fase de Idea):</strong> Esta iniciativa se encuentra en etapa conceptual y de estructuración técnica. Busco integrar socios cofundadores e inversores para auditar la ingeniería y ejecutar las pruebas industriales antes de la inversión mayor de planta.
     </div>
+
+    <span class="section-tag">El Problema y la Urgencia</span>
+    <h2>Una crisis global de sostenibilidad frente a miles de toneladas perdidas en el campo</h2>
+    <p class="sub">Mientras el mundo exige empaques biodegradables e insumos naturales, en el campo venezolano se desperdicia una materia prima de altísimo valor industrial.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1. Déficit Mundial y Latinoamericano (99,5% sin cubrir)</h3>
+        <p>Las leyes ambientales obligatorias en Europa y EE. UU. dispararon la demanda de bioplásticos, pero toda la capacidad instalada del mundo cubre apenas el <strong>0,5%</strong> (dejando un <strong>99,5% de demanda insatisfecha</strong>). En Latinoamérica, mercados como <strong>Brasil, México, Argentina, Colombia y Chile</strong> lideran las prohibiciones al plástico convencional sin suficiente oferta local.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Cero Infraestructura en Venezuela</h3>
+        <p>En Venezuela <strong>no existe ninguna planta o biorrefinería</strong> de este modelo. Las industrias agroalimentaria, farmacéutica, cosmética y plástica están obligadas a la costosa <strong>autoimportación</strong>, asumiendo sobrecostos en divisas, aranceles y retrasos aduaneros para obtener aceites naturales y pellets biodegradables.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. 7.000 Toneladas a la Basura en Yaracuy</h3>
+        <p><strong>Yaracuy es el primer estado productor de aguacate de Venezuela</strong> (aportando más del 52% de la cosecha nacional, con unas <strong>40.000 toneladas anuales</strong>). Durante la zafra se descartan <strong>7.000 toneladas al año</strong> por manchas o calibres fuera de estándar comercial, terminando en la basura, causando pérdidas al agricultor y focos de contaminación orgánica.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-alt">
+    <section>
+      <span class="section-tag">Propuesta de Valor y Ventaja Competitiva</span>
+      <h2>Mi Solución y Por Qué Elegirme desde el Origen</h2>
+      <p class="sub">Conectamos el rescate directo en la finca con las exigencias técnicas de la industria moderna.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Mi Propuesta: Biorrefinería en el Origen</h3>
+          <p>Busco diseñar y operar un <strong>centro de acopio y transformación directa en San Felipe, Yaracuy</strong>, rescatando el descarte agrícola de la zona para producir insumos listos para extrusión y refinación, sustituyendo importaciones en Venezuela y exportando excedentes para atraer divisas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Por Qué Me Elegirán los Productores</h3>
+          <p>Soy <strong>pequeño productor local de aguacate</strong>. Conozco la frustración de perder cosecha en el campo y hablo su mismo idioma. Busco asegurarles la <strong>compra directa y justa de todo su descarte en el mismo sitio</strong>, eliminando intermediarios y evitando pérdidas económicas y ambientales.</p>
+        </div>
+
+        <div class="card">
+          <h3>Por Qué Me Elegirán la Industria y Socios</h3>
+          <p>Soy <strong>promotor industrial y auditor de control de calidad</strong>. Garantizo acceso directo a la materia prima en origen —respaldada por el sello oficial de <strong>Indicación Geográfica Protegida (IGP) Aguacate de Yaracuy</strong>— y mesas técnicas para adaptar nuestros pellets bajo referentes como <strong>NBF Colombia</strong> y <strong>Biofase México</strong>.</p>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <div class="card" style="margin-top:1.5rem;border-top-color:#b45309">
-    <h3>¿Qué buscamos hoy?</h3>
-    <p>Buscamos <strong>socios cofundadores e inversores ángeles</strong> que aporten capital semilla inicial para el <strong>registro, legalización y formalización de la empresa</strong>, así como el canal técnico para presupuestar equipos (Alfa Laval) y ejecutar ensayos de laboratorio en Yaracuy antes de la inversión mayor de planta.</p>
-<section id="contacto">
-  <div class="contact">
-    <h2 style="color:#fff">Conecta con Green Industry Biorrefinerías</h2>
-    <p style="color:#d1d5db;margin:.8rem auto">Para fondos de impacto (Impacta VC), cofundadores, productores o empresas interesadas en Cartas de Intención (LOI):</p>
-    <div class="email-box">greenindustrybiorefineriasvy@gmail.com</div>
-    <a href="mailto:greenindustrybiorefineriasvy@://gmail.com" class="btn">Enviar Correo Directo</a>
-  </div>
-</section>
+  <section>
+    <span class="section-tag">Tamaño de la Oportunidad</span>
+    <h2>Potencial anual rescatando las 7.000 toneladas perdidas en Yaracuy</h2>
+    <p class="sub">Cálculo comercial basado en extracciones mínimas certificadas por protocolos públicos (CIEPE, INIA y UCV) y precios conservadores frente a la importación.</p>
 
-<footer>
-  <strong>Green Industry Biorrefinerías Residuo Cero</strong> · Autor: Wilkar Sánchez · San Felipe, Yaracuy, Venezuela.<br>
-  Alineado con los ODS de la ONU (2, 8, 9, 12 y 13) · Contacto: greenindustrybiorefineriasvy@gmail.com
-</footer>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-num">560.000 L</span>
+        <span class="stat-label">Aceite Puro de Aguacate (8% mín. a $5,50/L)</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">1.373.190 kg</span>
+        <span class="stat-label">Pellets de Bioplástico (Rígidos y Flexibles a $2,50/kg)</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">6.014.750 kg</span>
+        <span class="stat-label">Base para Alimento Animal ABA (85,925% a $0,20/kg)</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">$7.715.925</span>
+        <span class="stat-label">Valor Comercial Anual Rescatado del Campo</span>
+      </div>
+    </div>
+        </section>
+          <div class="bg-alt" id="fichas">
+    <section>
+      <span class="section-tag">Dossier de Fichas Técnicas</span>
+      <h2>Productos Residuo Cero (Data Pública y Protocolos Abiertos)</h2>
+      <p class="sub">Especificaciones técnicas proyectadas a partir de aguacate Choquette de descarte en Yaracuy.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>1. Aceite Crudo Virgen (Grado Industrial / Cosmético)</h3>
+          <p>Lípido vegetal sin refinar extraído por centrifugación mecánica de pulpa madurada, conservando vitaminas A, D, E y fitoesteroles nativos.</p>
+          <div class="tech-specs">
+            <strong>Extracción:</strong> Piso 8,0% (80 L/Ton) · Techo 13,0% fresco / 53,0% base seca.<br>
+            <strong>Acidez Libre:</strong> 1,5% – 2,0% (Ácido Oleico).
+          </div>
+          <div class="tech-ref">
+            <strong>Respaldo Público:</strong> SAPI (Res. N° 778, Pliego IGP Aguacate de Yaracuy), INIA (Agronomía Tropical), Fundación CIEPE y UCV (Ciencia de Alimentos).
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>2. Aceite Neutro Refinado RBD (Grado Alimentario)</h3>
+          <p>Lípido purificado mediante refinación alcalina para neutralizar acidez libre, olores volátiles y pigmentos, ideal para uso culinario y farmacéutico.</p>
+          <div class="tech-specs">
+            <strong>Punto de Humo:</strong> 271 °C (520 °F) — Alta estabilidad térmica.<br>
+            <strong>Acidez Libre:</strong> ≤ 0,1% (Ácido Oleico).
+          </div>
+          <div class="tech-ref">
+            <strong>Respaldo Público:</strong> INIA (Repositorio SIAN), Fundación CIEPE (Protocolos Agroindustriales Abiertos) y UCV (Tecnología de Alimentos).
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>3. Pellets Compuestos de Bioplástico (Grado Extrusión)</h3>
+          <p>Gránulos biopoliméricos listos para moldear, formulados con almidón de semilla de aguacate (30%–32%), glicerina y matrices biodegradables.</p>
+          <div class="tech-specs">
+            <strong>Conversión:</strong> 196,17 kg pellets/Ton (101,25 kg rígidos / 94,92 kg flexibles).<br>
+            <strong>Biodegradación:</strong> ≤ 180 días en suelo compostable · Ventana: 140–185 °C.
+          </div>
+          <div class="tech-ref">
+            <strong>Respaldo Público:</strong> ULA (Revista Avances en Química), Grupo B5IDA - USB (Dr. Marcos Sabino, Premio Lorenzo Mendoza Fleury 2026), CIEPE y UCV.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>4. Base para Alimento Animal (ABA) — Residuo Cero</h3>
+          <p>Biomasa vegetal estabilizada mediante secado térmico a partir de pulpa desengrasada, cáscara y fibra residual para nutrición animal.</p>
+          <div class="tech-specs">
+            <strong>Balance de Masa:</strong> 85,925% remanente (859,25 kg/Ton) · Techo 86,50%.<br>
+            <strong>Destino:</strong> Base energética y fibrosa para plantas formuladoras de ABA.
+          </div>
+          <div class="tech-ref">
+            <strong>Respaldo Público:</strong> Fundación CIEPE (Balances de Masa Agroindustriales), INIA y UCV (Agronomía y Nutrición Animal).
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="finanzas">
+    <span class="section-tag">Viabilidad Financiera (Simulación bajo Estrés)</span>
+    <h2>Números Conservadores con Extracciones Mínimas</h2>
+    <p class="sub">Ejercicio financiero modelado bajo un CAPEX simulado de $650.000,00 USD, con ingreso bruto de $1.102,28/Ton, costo variable de $580,83/Ton y costo fijo operativo de $24.900,00/mes (35 empleos directos).</p>
+
+    <div class="stats-grid">
+      <div class="fin-box">
+        <span class="fin-num">$650.000</span>
+        <span class="fin-label">CAPEX Simulado (Incluye fondo operativo inicial)</span>
+      </div>
+      <div class="fin-box">
+        <span class="fin-num">47,31%</span>
+        <span class="fin-label">Margen Bruto ($521,45 USD por Tonelada)</span>
+      </div>
+      <div class="fin-box">
+        <span class="fin-num">47,75 Ton/mes</span>
+        <span class="fin-label">Punto de Equilibrio Operativo</span>
+      </div>
+      <div class="fin-box">
+        <span class="fin-num">24,3 Meses</span>
+        <span class="fin-label">Recuperación de CAPEX (Utilidad neta $66.875/mes a 176 Ton)</span>
+      </div>
+    </div>
+
+    <div class="alert" style="margin-bottom:0;">
+      <strong>Seguridad Operativa y Continuidad Anual:</strong> Mitigamos la estacionalidad de la cosecha almacenando aceite crudo en tanques de acero inoxidable con atmósfera controlada, estabilizando la base ABA por secado térmico y manteniendo un inventario de seguridad de 90 días en resinas biodegradables.
+    </div>
+  </section>
+
+  <div class="bg-alt" id="contacto">
+    <section>
+      <span class="section-tag">Liderazgo en el Origen</span>
+      <h2>Fundador y Dirección General en Sitio</h2>
+
+      <div class="founder-card">
+        <img src="image_d2aec981.jpg" alt="Wilkar Sánchez - Fundador" class="avatar">
+        <div class="founder-info">
+          <h3 style="color:#1b4332;font-size:1.3rem;margin-bottom:4px;">Wilkar Sánchez</h3>
+          <p style="color:#2e7d32;font-weight:700;font-size:0.95rem;margin-bottom:10px;">Promotor Industrial · Pequeño Productor de Aguacate · Especialista en Auditoría de Control de Calidad</p>
+          <p style="color:#1f2937;font-size:0.98rem;">Ubicado en <strong>San Felipe, Estado Yaracuy, Venezuela</strong>. Mi combinación de experiencia técnica en control de calidad industrial y arraigo directo como productor agrícola garantiza el suministro de materia prima en el origen y el rigor técnico para liderar las mesas de calidad con las industrias compradoras.</p>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <h2>La Solicitud: Busco Cofundadores y Aliados Estratégicos</h2>
+        <p>Busco integrar socios cofundadores e inversores que aporten el canal comercial, auditoría de ingeniería (firmas como Alfa Laval) y validación técnica/comercial en Yaracuy antes de ejecutar la inversión mayor de planta, así como capital semilla para la formalización legal de la empresa.</p>
+        <a href="mailto:greenindustrybiorefineriasvy@://gmail.com" class="btn-email">
+          Escribir a greenindustrybiorefineriasvy@gmail.com
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <strong>Green Industry Biorrefinerías Residuo Cero</strong> · San Felipe, Estado Yaracuy, Venezuela<br>
+    Iniciativa agroindustrial en fase de idea · Contacto directo: greenindustrybiorefineriasvy@gmail.com
+  </footer>
+
 </body>
-  </html>
+</html>
