@@ -1,342 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Industry Biorrefinerías Residuo Cero | Memorando Ejecutivo</title>
-    <style>
-        :root {
-            --primary: #1b4332;
-            --secondary: #2d6a4f;
-            --accent: #52b788;
-            --gold: #b45309;
-            --gold-bg: #fffbeb;
-            --light-bg: #f4f7f5;
-            --text-dark: #1f2937;
-            --text-muted: #4b5563;
-            --white: #ffffff;
-            --border: #e5e7eb;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            scroll-behavior: smooth;
-        }
-        body {
-            color: var(--text-dark);
-            line-height: 1.65;
-            background-color: var(--white);
-        }
-        header {
-            background-color: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1.2;
-        }
-        .logo span {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--secondary);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .nav-btn {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.55rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-        }
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: var(--white);
-            padding: 4rem 5%;
-            text-align: center;
-        }
-        .stage-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.16);
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            padding: 0.45rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            letter-spacing: 0.4px;
-        }
-        .hero h1 {
-            font-size: 2.1rem;
-            max-width: 900px;
-            margin: 0 auto 1.2rem;
-            line-height: 1.25;
-        }
-        .hero p {
-            font-size: 1.05rem;
-            max-width: 780px;
-            margin: 0 auto 2rem;
-            color: #e5e7eb;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 0.8rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn-primary {
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 0.85rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        section {
-            padding: 3.8rem 5%;
-            max-width: 1120px;
-            margin: 0 auto;
-        }
-        .bg-light {
-            background-color: var(--light-bg);
-            max-width: 100%;
-        }
-        .inner-wrap {
-            max-width: 1120px;
-            margin: 0 auto;
-        }
-        .section-tag {
-            color: var(--secondary);
-            font-weight: 700;
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            text-align: center;
-            margin-bottom: 0.4rem;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 1.85rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            line-height: 1.25;
-        }
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto 2.5rem;
-            font-size: 1rem;
-        }
-        .alert-box {
-            background: var(--gold-bg);
-            border: 1px solid #fde68a;
-            border-left: 5px solid var(--gold);
-            padding: 1.4rem;
-            border-radius: 8px;
-            margin-bottom: 2.5rem;
-        }
-        .alert-box h4 {
-            color: #92400e;
-            font-size: 1.05rem;
-            margin-bottom: 0.35rem;
-        }
-        .alert-box p {
-            color: #78350f;
-            font-size: 0.93rem;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 1.5rem;
-        }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .card {
-            background: var(--white);
-            padding: 1.8rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--secondary);
-        }
-        .card h3 {
-            color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 0.6rem;
-        }
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.94rem;
-        }
-        .tech-card {
-            background: var(--white);
-            padding: 1.8rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        .tech-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 0.8rem;
-        }
-        .tech-header h3 {
-            color: var(--primary);
-            font-size: 1.25rem;
-        }
-        .tech-badge {
-            background: #d8f3dc;
-            color: var(--primary);
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 0.3rem 0.7rem;
-            border-radius: 4px;
-        }
-        .tech-specs {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            background: var(--light-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-        }
-        .tech-ref {
-            font-size: 0.84rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            padding-top: 0.7rem;
-        }
-        .opp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1.5rem;
-        }
-        .opp-item {
-            background: var(--primary);
-            color: var(--white);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .opp-item .num {
-            font-size: 1.65rem;
-            font-weight: 800;
-            color: var(--accent);
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-        .opp-item .lbl {
-            font-size: 0.9rem;
-            color: #e5e7eb;
-        }
-        .fin-table-wrap {
-            overflow-x: auto;
-            margin-bottom: 1.5rem;
-            background: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 0.92rem;
-        }
-        th {
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.9rem 1rem;
-        }
-        td {
-            padding: 0.85rem 1rem;
-            border-bottom: 1px solid var(--border);
-        }
-        tr:last-child td {
-            border-bottom: none;
-        }
-        .highlight-row {
-            background: #ecfdf5;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        .founder-card {
-            background: var(--light-bg);
-            border-radius: 12px;
-            padding: 2.2rem;
-            display: flex;
-            align-items: center;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-            border: 1px solid #d1fae5;
-        }
-        .founder-avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            font-weight: 800;
-            flex-shrink: 0;
-            border: 4px solid var(--accent);
-            overflow: hidden;
-        }
-        .founder-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .founder-info {
-            flex: 1;
-            min-width: 260px;
-        }
-        .founder-info h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 0.2rem;
-        }
-        .founder-role {
-            color: var(--secondary);
-            font-weight: 700;
-            font-size: 0.92rem;
-            margin-bottom: 0.8rem;
-            display: block;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Industry Biorrefinerías Residuo Cero</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{color:#1f2937;line-height:1.6;background:#fff}
+header{background:#fff;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #e5e7eb;position:sticky;top:0;z-index:99}
+.logo{font-size:1.1rem;font-weight:800;color:#1b4332}
+.logo span{display:block;font-size:.75rem;color:#2d6a4f}
+.btn-nav{background:#1b4332;color:#fff;padding:.5rem 1rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.85rem}
+.hero{background:#1b4332;color:#fff;padding:3.5rem 5%;text-align:center}
+.badge{display:inline-block;background:rgba(255,255,255,.15);padding:.4rem .9rem;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:1rem}
+.hero h1{font-size:1.9rem;margin-bottom:1rem;line-height:1.25}
+.hero p{max-width:750px;margin:0 auto 1.8rem;color:#e5e7eb;font-size:1rem}
+.btn{display:inline-block;background:#52b788;color:#1b4332;padding:.8rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:700;margin:.3rem}
+.btn-out{display:inline-block;border:2px solid #fff;color:#fff;padding:.75rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:700;margin:.3rem}
+section{padding:3rem 5%;max-width:1050px;margin:0 auto}
+.bg-gray{background:#f4f7f5;max-width:100%}
+.wrap{max-width:1050px;margin:0 auto}
+h2{color:#1b4332;font-size:1.65rem;margin-bottom:.8rem;text-align:center}
+.sub{text-align:center;color:#4b5563;max-width:750px;margin:0 auto 2rem}
+.alert{background:#fffbeb;border-left:5px solid #b45309;padding:1.2rem;border-radius:6px;margin-bottom:2rem;color:#78350f;font-size:.93rem}
+.card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:4px solid #2d6a4f;margin-bottom:1.2rem}
+.card h3{color:#1b4332;margin-bottom:.5rem;font-size:1.15rem}
+.specs{background:#f4f7f5;padding:.8rem;border-radius:6px;margin:.8rem 0;font-size:.9rem}
+.ref{font-size:.82rem;color:#4b5563;border-top:1px solid #e5e7eb;padding-top:.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.stat{background:#1b4332;color:#fff;padding:1.3rem;border-radius:8px;text-align:center}
+.stat strong{display:block;font-size:1.5rem;color:#52b788}
+table{width:100%;border-collapse:collapse;background:#fff;margin-bottom:1.5rem;font-size:.9rem}
+th{background:#1b4332;color:#fff;padding:.8rem;text-align:left}
+td{padding:.75rem .8rem;border-bottom:1px solid #e5e7eb}
+.tot{background:#ecfdf5;font-weight:700;color:#1b4332}
+.founder{background:#f4f7f5;padding:1.8rem;border-radius:10px;border:1px solid #d1fae5;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.avatar{width:85px;height:85px;border-radius:50%;background:#1b4332;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;border:3px solid #52b788}
+.contact{background:#1b4332;color:#fff;padding:2.5rem 1.5rem;border-radius:10px;text-align:center}
+.email-box{background:rgba(255,255,255,.15);padding:.9rem;border-radius:6px;font-weight:700;margin:1.2rem auto;max-width:420px;word-break:break-all;border:1px dashed #fff}
+footer{background:#111827;color:#9ca3af;text-align:center;padding:1.8rem 5%;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">GREEN INDUSTRY<span>Biorrefinerías Residuo Cero</span></div>
+  <a href="#contacto" class="btn-nav">Conectar</a>
+</header>
+
+<div class="hero">
+  <div class="badge">📍 SAN FELIPE, YARACUY · PROYECTO EN FASE DE IDEA</div>
+  <h1>Primera Biorrefinería Residuo Cero de Aguacate en Venezuela</h1>
+  <p>Iniciativa agroindustrial B2B diseñada para transformar las <strong>7.000 toneladas de aguacate descartadas durante la zafra</strong> en Yaracuy en aceite puro, pellets compuestos de bioplástico y base proteica animal (ABA).</p>
+  <a href="#fichas" class="btn">Ver Fichas Técnicas</a>
+  <a href="#finanzas" class="btn-out">Hoja de Números</a>
+</div>
+
+<section>
+  <div class="alert">
+    <strong>Transparencia de Etapa (Fase de Idea):</strong> Iniciativa en etapa conceptual con ingeniería preliminar, data pública validada (CIEPE, INIA, UCV, ULA, USB) y simulación financiera bajo estrés. Buscamos <strong>socios cofundadores, inversores ángeles y capital semilla</strong> para constituir legalmente la empresa y ejecutar ensayos de laboratorio.
+  </div>
+  <h2>Problema y Ventaja Competitiva</h2>
+  <p class="sub">Conectamos el descarte agrícola de Yaracuy con la alta demanda industrial de insumos naturales y biopolímeros.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Centro de Acopio Directo en Origen</h3>
+      <p>Ubicados en <strong>San Felipe, Yaracuy</strong>, articulamos con productores locales para rescatar <strong>7.000 toneladas de aguacate durante la zafra</strong> (variedades Choquette y Catalina) descartadas por estética, negociando precios variables según la dinámica de mercado.</p>
+    </div>
+    <div class="card">
+      <h3>Blindaje IGP Yaracuy y Sustitución</h3>
+      <p>Proyectados bajo el estándar de referentes como <em>NBF Colombia</em> y <em>Biofase México</em>, respaldados por la <strong>Indicación Geográfica Protegida (IGP) Aguacate de Yaracuy</strong> (SAPI Res. N° 778) para sustituir importaciones y exportar.</p>
+    </div>
+  </div>
+</section>
+<div class="bg-gray" id="fichas">
+<section class="wrap">
+  <h2>Dossier de 4 Productos Industriales</h2>
+  <p class="sub">Aprovechamiento integral (pulpa, semilla y cáscara) basado en protocolos científicos públicos.</p>
+
+  <div class="card">
+    <h3>1. Aceite Crudo Virgen de Aguacate (Industrial / Cosmético)</h3>
+    <p>Lípido vegetal sin refinar extraído por centrifugación mecánica de pulpa madurada de aguacate Choquette.</p>
+    <div class="specs"><strong>Rendimiento:</strong> 8,0% piso (80 L/Ton) a 13,0% fresco | <strong>Acidez:</strong> 1,5% - 2,0% | <strong>Bioactivos:</strong> Vitaminas A, D, E y fitoesteroles.</div>
+    <div class="ref">Respaldo: SAPI (Res. N° 778 IGP), INIA (Agronomía Tropical Vol. 44-4), Fundación CIEPE y UCV.</div>
+  </div>
+
+  <div class="card">
+    <h3>2. Aceite Neutro Refinado de Aguacate (Grado Alimentario)</h3>
+    <p>Lípido purificado mediante refinación alcalina (RBD) para procesos térmicos continuos.</p>
+    <div class="specs"><strong>Rendimiento:</strong> 8,0% piso (80 L/Ton) | <strong>Acidez:</strong> ≤ 0,1% | <strong>Punto de Humo:</strong> 271 °C (520 °F).</div>
+    <div class="ref">Respaldo: INIA (Repositorio SIAN), Fundación CIEPE y UCV.</div>
+  </div>
+
+  <div class="card">
+    <h3>3. Pellets Compuestos de Bioplástico (Extrusión e Inyección)</h3>
+    <p>Gránulos biopoliméricos listos para moldear con almidón de semilla (30%–32%), glicerina y matrices biodegradables.</p>
+    <div class="specs"><strong>Conversión:</strong> 60,75 kg/Ton almidón → <strong>196,17 kg/Ton pellets</strong> (101,25 kg rígidos / 94,92 kg flexibles) | <strong>Degradación:</strong> ≤ 180 días.</div>
+    <div class="ref">Respaldo: ULA, Grupo B5IDA - USB (Dr. Marcos Sabino), Fundación CIEPE y UCV.</div>
+  </div>
+
+  <div class="card">
+    <h3>4. Base para Alimento Balanceado Animal (ABA - Residuo Cero)</h3>
+    <p>Biomasa vegetal estabilizada por secado térmico de pulpa desengrasada, cáscara y fibra residual.</p>
+    <div class="specs"><strong>Balance de Masa:</strong> 85,925% (859,25 kg/Ton) · Techo 86,50% | <strong>Destino:</strong> Plantas de Alimentos Balanceados (ABA).</div>
+    <div class="ref">Respaldo: Fundación CIEPE, INIA y UCV.</div>
+  </div>
+</section>
+</div>
+
+<section>
+  <h2>Potencial Anual de las 7.000 Toneladas</h2>
+  <p class="sub">Calculado bajo rendimientos mínimos CIEPE y precios conservadores frente a importación.</p>
+  <div class="grid">
+    <div class="stat"><strong>560.000 L</strong>Aceite Puro (Ref. $5,50/L)</div>
+    <div class="stat"><strong>1.373.190 kg</strong>Pellets Bioplásticos (Ref. $2,50/kg)</div>
+    <div class="stat"><strong>6.014.750 kg</strong>Base Proteica ABA (Ref. $0,20/kg)</div>
+    <div class="stat"><strong>$7.715.925</strong>Oportunidad Comercial Anual</div>
+  </div>
+</section>
+
+<div class="bg-gray" id="finanzas">
+<section class="wrap">
+  <h2>Hoja de Números (Simulación Bajo Estrés)</h2>
+  <p class="sub">Calibrada en fase de idea para jornada de 8h (22 días/mes = 176 Ton/mes). El costo de materia prima ($0,20/kg) es un parámetro referencial simulado.</p>
+
+  <table>
+    <tr><th colspan="2">1. Plan de Inversión Inicial Simulado (CAPEX)</th></tr>
+    <tr><td>Equipos Refinación Aceite (Línea Alfa Laval)</td><td>$245.000,00</td></tr>
+    <tr><td>Línea Biopolímeros (Peletizadora), Molienda y ABA</td><td>$110.000,00</td></tr>
+    <tr><td>Tanques Acero Inoxidable y Atmósfera Nitrógeno</td><td>$30.000,00</td></tr>
+    <tr><td>Recepción, Maduración y Obra Civil/Eléctrica</td><td>$105.000,00</td></tr>
+    <tr><td>Ingeniería, Laboratorio ($20k) + Permisos ($15k)</td><td>$35.000,00</td></tr>
+    <tr><td>Fondo Protección Operativa (4 Meses)</td><td>$125.000,00</td></tr>
+    <tr class="tot"><td>TOTAL CAPEX SIMULADO</td><td>$650.000,00</td></tr>
+  </table>
+
+  <table>
+    <tr><th colspan="2">2. Unit Economics (Por Tonelada) y Operación Mensual</th></tr>
+    <tr><td>Ingreso Bruto/Ton (80L Aceite + 196,17kg Pellets + 859,25kg ABA)</td><td><strong>$1.102,28 / Ton</strong></td></tr>
+    <tr><td>Costo Variable/Ton (Materia prima ref., PLA/PBAT, glicerina e insumos)</td><td>-$580,83 / Ton</td></tr>
+    <tr class="tot"><td>MARGEN BRUTO REAL POR TONELADA (47,31%)</td><td>$521,45 / Ton</td></tr>
+    <tr><td>Costo Fijo Operativo Mensual (OPEX - Nómina 35 pers., galpón, servicios)</td><td>$24.900,00 / mes</td></tr>
+    <tr><td>Punto de Equilibrio Operativo Mínimo</td><td>47,75 Ton / mes</td></tr>
+    <tr><td>Utilidad Mensual Proyectada (176 Ton/mes · Antes de ISLR)</td><td>$66.875,20 / mes</td></tr>
+    <tr class="tot"><td>RECUPERACIÓN DEL CAPEX (Esquema 40/40/20)</td><td>24,3 Meses (2 Años)</td></tr>
+  </table>
+</section>
+</div>
+
+<section>
+  <h2>Fundador y Solicitud de Capital Semilla</h2>
+  <div class="founder">
+    <div class="avatar">WS</div>
+    <div style="flex:1;min-width:250px">
+      <h3 style="color:#1b4332;font-size:1.35rem">Wilkar Sánchez</h3>
+      <p style="color:#2d6a4f;font-weight:700;margin-bottom:.5rem">Fundador y Director General · Promotor Industrial y Auditor de Control de Calidad</p>
+      <p style="font-size:.94rem;color:#4b5563">Pequeño productor de aguacate en Yaracuy con experiencia en campo y auditoría de calidad industrial. Lidera la articulación con productores agrícolas locales y las mesas técnicas con la industria compradora.</p>
+      <p style="font-size:.88rem;font-weight:700;color:#1b4332;margin-top:.5rem">📍 San Felipe, Estado Yaracuy, Venezuela · ✉️ greenindustrybiorefineriasvy@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.5rem;border-top-color:#b45309">
+    <h3>¿Qué buscamos hoy?</h3>
+    <p>Buscamos <strong>socios cofundadores e inversores ángeles</strong> que aporten capital semilla inicial para el <strong>registro, legalización y formalización de la empresa</strong>, así como el canal técnico para presupuestar equipos (Alfa Laval) y ejecutar ensayos de laboratorio en Yaracuy antes de la inversión mayor de planta.</p>
+<section id="contacto">
+  <div class="contact">
+    <h2 style="color:#fff">Conecta con Green Industry Biorrefinerías</h2>
+    <p style="color:#d1d5db;margin:.8rem auto">Para fondos de impacto (Impacta VC), cofundadores, productores o empresas interesadas en Cartas de Intención (LOI):</p>
+    <div class="email-box">greenindustrybiorefineriasvy@gmail.com</div>
+    <a href="mailto:greenindustrybiorefineriasvy@://gmail.com" class="btn">Enviar Correo Directo</a>
+  </div>
+</section>
+
+<footer>
+  <strong>Green Industry Biorrefinerías Residuo Cero</strong> · Autor: Wilkar Sánchez · San Felipe, Yaracuy, Venezuela.<br>
+  Alineado con los ODS de la ONU (2, 8, 9, 12 y 13) · Contacto: greenindustrybiorefineriasvy@gmail.com
+</footer>
+</body>
+  </html>
